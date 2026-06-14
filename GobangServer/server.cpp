@@ -190,10 +190,10 @@ void GobangServer::handleJoinRoom(int clientId, const QJsonObject &msg)
     room->addPlayer(session);
     session->sendMessage(Protocol::joinRoomResp(true));
 
-    // 通知房间内的另一方
-    ClientSession *other = room->player1();
-    if (other && other != session) {
-        other->sendMessage(Protocol::playerJoinedRoom(session->nickname()));
+    // 通知双方对方昵称
+    if (room->player1() && room->player2()) {
+        room->player1()->sendMessage(Protocol::playerJoinedRoom(room->player2()->nickname()));
+        room->player2()->sendMessage(Protocol::playerJoinedRoom(room->player1()->nickname()));
     }
 
     qInfo() << session->nickname() << "joined room" << roomId;

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UI version="4.0" >
+ <class>OnlineGobangClass</class>
+ <widget class="QMainWindow" name="OnlineGobangClass" >
+  <property name="objectName" >
+   <string notr="true">OnlineGobangClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>联机五子棋</string>
+  </property>
+  <widget class="QMenuBar" name="menuBar" />
+  <widget class="QStatusBar" name="statusBar" />
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="OnlineGobang.qrc"/>
+ </resources>
+ <connections/>
+</UI>
